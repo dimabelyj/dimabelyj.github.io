@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(68, 62, 150);
+}
+
+[value="Send"] {
+    width: 100px;
+    height: 40px;
+    background-color: green;
+    color: white;
+    border: 0px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.label {
+    display: block;
+    color: white;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+.input {
+    width: 350px;
+    height: 25px;
+    background-color: rgb(86, 86, 180);
+    padding-top: 5px;
+    border: 0ch;
+    margin-left: 20px;
+}
+
+#city {
+    width: 350px;
+    height: 20px;
+    background-color: rgb(86, 86, 180);
+    margin-top: 5px;
+    border: 0ch;
+    margin-left: 20px;
+    color: white;
+}
+
+p {
+    color: white;
+    margin-left: 20px;
+}
+
+[type="radio"],
+[type="checkbox"] {
+    margin-left: 20px;
+}
+
+.label1 {
+    color: white;
+}
+
+#message {
+    width: 350px;
+    height: 150px;
+    background-color: rgb(86, 86, 180);
+    margin-top: 5px;
+    border: 0ch;
+    margin-left: 20px;
+}
