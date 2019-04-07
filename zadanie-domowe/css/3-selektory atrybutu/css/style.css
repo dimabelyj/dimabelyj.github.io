@@ -1,0 +1,37 @@
+[title] {
+    font-size: 30px;
+    color: red;
+}
+
+[title="About me"] {
+    color: blue;
+    font-style: italic;
+}
+
+[title*="olio"] {
+    color: green;
+    font-size: 14px;
+}
+
+
+/* ten który na pociątku More*/
+
+[title^="More"] {
+    background-color: blueviolet;
+    color: white;
+}
+
+
+/* ten który na koncu More*/
+
+[title$="More"] {
+    background-color: red;
+    color: yellow;
+}
+
+
+/* łączenie selektorów*/
+
+li[title]:last-child {
+    background-color: darkblue;
+}
