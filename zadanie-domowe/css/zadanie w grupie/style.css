@@ -1,0 +1,59 @@
+form {
+    background-color: rgba(4, 4, 41, 0.568);
+    width: 45%;
+    height: 100%;
+}
+
+input {
+    width: 350px;
+    height: 25px;
+    background-color: rgb(86, 86, 180);
+    margin-top: 5px;
+    border: 0ch;
+    margin-left: 20px;
+}
+
+.input {
+    display: inline;
+    width: 12px;
+    height: 12px;
+    padding-left: 2px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: white;
+    padding-top: 10px;
+    padding-left: 25px;
+}
+
+.label {
+    display: inline;
+}
+
+p {
+    margin-top: 10px;
+    color: white;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+#city {
+    width: 350px;
+    height: 18px;
+    background-color: rgb(86, 86, 180);
+    color: white;
+    margin-top: 5px;
+    border: 0ch;
+    margin-left: 20px;
+}
+
+textarea {
+    width: 350px;
+    height: 150px;
+    background-color: rgb(86, 86, 180);
+    margin-top: 5px;
+    border: 0ch;
+    margin-left: 20px;
+}
