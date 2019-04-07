@@ -1,0 +1,55 @@
+html {
+    font-size: 15px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.size-px {
+    width: 400px;
+    height: 200px;
+    background-color: rgb(29, 214, 143);
+}
+
+.size-pr {
+    width: 60%;
+    height: 200px;
+    background-color: greenyellow;
+}
+
+.size-vh {
+    width: 50vh;
+    height: 200px;
+    background-color: blue;
+}
+
+.size-vw {
+    width: 50vw;
+    height: 200px;
+    background-color: rgb(37, 37, 58, 0.5);
+    position: relative;
+    top: -60px;
+    left: 60px;
+}
+
+.em {
+    font-size: 30px;
+}
+
+.em p {
+    font-size: 2em;
+}
+
+.rem {
+    font-size: 3em;
+}
+
+.rem p {
+    font-size: 2rem;
+}
+
+
+/*1rem = 1*font size html
+2rem = 2*font size html*/
