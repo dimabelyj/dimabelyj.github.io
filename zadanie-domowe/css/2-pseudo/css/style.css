@@ -1,5 +1,5 @@
 .akapit::before {
-    content: "Przed tekstem";
+    content: 'Przed tekstem';
     color: red;
 }
 
@@ -10,4 +10,43 @@
 
 .akapit::first-line {
     color: chartreuse;
+}
+
+
+/* ***************************** */
+
+.customer-list__item {
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.customer-list__item:first-child {
+    color: lime;
+    font-size: 30px;
+}
+
+.customer-list__item:nth-child(6) {
+    background-color: black;
+}
+
+.customer-list__item:nth-child(3n+5) {
+    color: darkgreen;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+
+/* ******************************** */
+
+input:focus {
+    border: 1px solid red;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: darkcyan;
+}
+
+button:active {
+    background-color: gold;
 }
