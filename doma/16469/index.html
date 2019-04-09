@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML-5</title>
+</head>
+
+<body>
+    <form action="https://formspree.io/belokolodskikh@gmail.com" method="POST">
+        <h3>Dane osobowe</h3>
+        <label for="name">1.Imię</label>
+        <input type="text" name="Name" value="Imię" required>
+        <br> <br>
+        <label for="surname">2.Nazwisko</label>
+        <input type="text" name="surname" value="Nazwisko" required>
+        <br> <br>
+        <label for="mail">3.E-mail</label>
+        <input type="email" name="email" value="E-mail" id="" required>
+        <br> <br>
+        <label for="phone">4.Telefon</label>
+        <input type="tel" name="phone" value="Telefon" id="" required>
+
+        <br> <br>
+
+        <label for="city">Wybor miasta</label>
+        <select name="city" id="" required>
+            <option value="Warszawa">1.Warszawa</option>
+            <option value="Gdansk">2.Gdansk</option>
+            <option value="Kraków">3.Kraków</option>
+        </select>
+
+        <br> <br>
+
+        <p>Płec:</p>
+        <input type="radio" name="female" value="female" id="">
+        <label for="female"> Kobieta</label> <br>
+        <input type="radio" name="male" value="male" id="">
+        <label for="male"> Mężczyzna</label>
+
+        <br> <br>
+
+        <label for="text">Wiadomość</label> <br>
+        <textarea name="text" id="" cols="30" rows="10"></textarea>
+
+        <br> <br>
+
+        <input type="checkbox" name="check" id="">
+        <label for="checkbox">Wyrażam zgodę na przetwarzanie danych osobowych</label>
+
+        <br> <br>
+        <button type="submit">Send</button>
+
+    </form>
+
+</body>
+
+</html>
