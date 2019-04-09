@@ -1,0 +1,95 @@
+/*.block {
+    top: 200px;
+    left: 200px;
+}*/
+
+#squ {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+    left: 500px;
+    top: 150px;
+}
+
+#circ {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    display: inline-block;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.squ1 {
+    background-color: red;
+}
+
+.circ1 {
+    background-color: pink;
+}
+
+.squ2 {
+    background-color: blue;
+}
+
+.circ2 {
+    background-color: gray;
+}
+
+.squ3 {
+    background-color: green;
+}
+
+.circ3 {
+    background-color: blueviolet;
+}
+
+.squ4 {
+    background-color: yellow;
+}
+
+.circ4 {
+    background-color: greenyellow;
+}
+
+.squ5 {
+    background-color: black;
+}
+
+.circ5 {
+    background-color: red;
+}
+
+.squ6 {
+    background-color: orange
+}
+
+.circ6 {
+    background-color: blue;
+}
+
+.squ7 {
+    background-color: blueviolet;
+}
+
+.circ7 {
+    background-color: orange;
+}
+
+.squ8 {
+    background-color: gray;
+}
+
+.circ8 {
+    background-color: yellow;
+}
+
+.squ9 {
+    background-color: pink;
+}
+
+.circ9 {
+    background-color: black;
+}
