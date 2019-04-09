@@ -12,22 +12,22 @@
     <form action="https://formspree.io/belokolodskikh@gmail.com" method="POST">
         <h3>Dane osobowe</h3>
         <label for="name">1.Imię</label>
-        <input type="text" name="Name" value="Imię" required>
+        <input type="text" name="Name" value="Imię" id="name" required>
         <br> <br>
         <label for="surname">2.Nazwisko</label>
-        <input type="text" name="Surname" value="Nazwisko" required>
+        <input type="text" name="Surname" value="Nazwisko" id="surname" required>
         <br> <br>
-        <label for="mail">3.E-mail</label>
-        <input type="email" name="e-mail" value="E-mail" id="" required>
+        <label for="email">3.E-mail</label>
+        <input type="email" name="e-mail" value="email" id="email" required>
         <br> <br>
         <label for="phone">4.Telefon</label>
-        <input type="tel" name="Phone" value="Telefon" id="" required>
+        <input type="tel" name="Phone" value="telefon" id="phone" required>
 
         <br> <br>
 
         <label for="city">Wybor miasta</label>
-        <select name="City" id="" required>
-            <option value="Warszawa">1.Warszawa</option>
+        <select name="City" id="city" required>
+            <option value="">1.Warszawa</option>
             <option value="Gdansk">2.Gdansk</option>
             <option value="Kraków">3.Kraków</option>
         </select>
@@ -35,20 +35,20 @@
         <br> <br>
 
         <p>Płec:</p>
-        <input type="radio" name="Gender" value="female" id="">
-        <label for="Gender"> Kobieta</label> <br>
-        <input type="radio" name="Gender" value="male" id="">
-        <label for="Gender"> Mężczyzna</label>
+        <input type="radio" name="Gender" value="female" id="female">
+        <label for="female"> Kobieta</label> <br>
+        <input type="radio" name="Gender" value="male" id="male">
+        <label for="male"> Mężczyzna</label>
 
         <br> <br>
 
         <label for="text">Wiadomość</label> <br>
-        <textarea name="Message" id="" cols="30" rows="10"></textarea>
+        <textarea name="Message" cols="30" rows="10" id="text"></textarea>
 
         <br> <br>
 
-        <input type="checkbox" name="check" id="">
-        <label for="checkbox">Wyrażam zgodę na przetwarzanie danych osobowych</label>
+        <input type="checkbox" name="check" id="check">
+        <label for="check">Wyrażam zgodę na przetwarzanie danych osobowych</label>
 
         <br> <br>
         <button type="submit">Send</button>
