@@ -1,0 +1,12 @@
+h2 {
+    font-style: italic;
+    color: lightskyblue;
+}
+
+h1 {
+    color: blue;
+}
+
+#number {
+    padding-left: 50px;
+}
