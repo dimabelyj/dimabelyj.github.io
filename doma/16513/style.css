@@ -1,0 +1,51 @@
+#rect {
+    width: 500px;
+    height: 640px;
+    background-color: green;
+    position: relative;
+}
+
+div[title="squ"] {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    position: absolute;
+    display: inline-block;
+}
+
+div[title="circ"] {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: blue;
+    position: absolute;
+}
+
+.circ1 {
+    right: 0px;
+    bottom: 0px;
+}
+
+.squ1 {
+    right: 0px;
+}
+
+.circ2 {
+    left: 0px;
+    bottom: 0px;
+}
+
+.circ3 {
+    top: 0px;
+    right: 0px;
+}
+
+.squ2 {
+    bottom: 0px;
+    left: 0px;
+}
+
+.squ3 {
+    bottom: 0px;
+    right: 0px;
+}
