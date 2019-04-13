@@ -9,5 +9,6 @@
     /* top center*/
     /*ustawienie wielkosci*/
     background-size: cover;
+    /*zeby litery lataly, a zdjecie pozostalo na miejscu*/
     background-attachment: fixed;
 }
