@@ -1,0 +1,31 @@
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+#colors {
+    background-color: yellow;
+    transition: background-color 3s linear 1s;
+}
+
+#colors:hover {
+    background-color: brown;
+}
+
+#box1 {
+    background-color: deeppink;
+}
+
+#box1:hover {
+    width: 150px;
+    transition: width 1s linear 0s;
+}
+
+#box2 {
+    background-color: brown;
+}
+
+#box3 {
+    background-color: cornflowerblue;
+}
