@@ -1,0 +1,48 @@
+
+/* 
+------------------------------------
+Domyślne kolory 'flex-item' - START
+------------------------------------ 
+*/
+.flex-item {
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    border: 1px solid blue;
+    padding: 10px;
+    margin: 3px;
+    background-color: orange;
+    flex-basis: 40%;
+/*    flex-shrink: 2;*/
+}
+
+.flex-item:nth-last-of-type(odd) {
+    background-color: lightgray;
+}
+/* 
+------------------------------------
+Domyślne kolory 'flex-item' - END
+------------------------------------ 
+*/
+
+
+
+
+
+.container {
+    border: 1px dashed red;
+    display: flex;
+}
+
+/*
+Każdy item ma ustawiony flex-basis na 40%.
+Czyli itemy są szersze o 20% niż kontener.
+Ustaw flex-shrink, aby zobaczyć jak item się zmniejsza :)
+*/
+.ordered-item {
+/*    flex-shrink: 4;*/
+}
+
+
+
+
+

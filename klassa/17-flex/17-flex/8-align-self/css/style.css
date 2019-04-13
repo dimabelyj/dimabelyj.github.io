@@ -1,0 +1,44 @@
+
+/* 
+------------------------------------
+Domyślne kolory 'flex-item' - START
+------------------------------------ 
+*/
+.flex-item {
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    border: 1px solid blue;
+    padding: 10px;
+    margin: 3px;
+    background-color: orange;
+    flex-basis: 15%;
+}
+
+.flex-item:nth-last-of-type(odd) {
+    background-color: lightgray;
+}
+/* 
+------------------------------------
+Domyślne kolory 'flex-item' - END
+------------------------------------ 
+*/
+
+
+
+
+
+.container {
+    border: 1px dashed red;
+    height: 700px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.ordered-item {
+/*	align-self: flex-end;*/
+}
+
+
+
+
+

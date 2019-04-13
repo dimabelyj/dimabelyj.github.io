@@ -1,0 +1,37 @@
+/* 
+------------------------------------
+Domyślne kolory 'flex-item' - START
+------------------------------------ 
+*/
+
+.flex-item {
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    border: 1px solid blue;
+    padding: 10px;
+    margin: 3px;
+    background-color: orange;
+    flex-basis: 15%;
+}
+
+.flex-item:nth-last-of-type(odd) {
+    background-color: lightgray;
+}
+
+
+/* 
+------------------------------------
+Domyślne kolory 'flex-item' - END
+------------------------------------ 
+*/
+
+.container {
+    border: 1px dashed red;
+    display: flex;
+    /*justify-content: flex-start;*/
+    /*justify-content: flex-end;*/
+    /*justify-content: center;*/
+    /*justify-content: space-between;*/
+    /*justify-content: space-around;*/
+    justify-content: space-evenly;
+}
