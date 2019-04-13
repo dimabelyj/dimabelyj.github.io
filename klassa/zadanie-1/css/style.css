@@ -1,0 +1,36 @@
+#div1 {
+    width: 150px;
+    height: 150px;
+    background-color: aquamarine;
+}
+
+#div1:hover {
+    width: 300px;
+    transition: width 1s linear 0s;
+}
+
+#div2 {
+    width: 150px;
+    height: 150px;
+    background-color: lightgreen;
+    margin-top: 10px;
+}
+
+#div2:hover {
+    height: 300px;
+    transition: height 1s linear 0s;
+}
+
+#div3 {
+    width: 150px;
+    height: 150px;
+    background-color: lightcoral;
+    margin-top: 10px;
+}
+
+#div3:hover {
+    height: 300px;
+    width: 300px;
+    background-color: aqua;
+    transition: height 1s linear 0s, width 1s linear 0s, background-color 1s linear 0s;
+}
