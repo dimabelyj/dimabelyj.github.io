@@ -1,0 +1,13 @@
+#background-img {
+    background-color: lightblue;
+    background-image: url("../img/truskawka.jpg");
+    background-repeat: repeat-x;
+    /*zeby w jednym miejscu:*/
+    background-repeat: no-repeat;
+    /*ustawiamy miejsce na stronie*/
+    /*background-position: 50px 200px;*/
+    /* top center*/
+    /*ustawienie wielkosci*/
+    background-size: cover;
+    background-attachment: fixed;
+}
