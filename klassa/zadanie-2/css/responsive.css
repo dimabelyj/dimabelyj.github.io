@@ -49,7 +49,7 @@ figure img {
 
 @media (min-width:768px) {
     figure {
-        width: 66%;
+        width: 50%;
     }
 }
 
