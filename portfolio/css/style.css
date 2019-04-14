@@ -1,0 +1,90 @@
+body {
+    background-color: #f2f1ed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main-header {
+    display: flex;
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-meniu .button {
+    width: 100px;
+    height: 40px;
+    font-size: 8px;
+    border: solid 1px #007bff;
+    background-color: transparent;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 0px;
+}
+
+span {
+    color: #007bff;
+}
+
+hr {
+    width: 50px;
+    height: 1px;
+    background-color: #007bff;
+    margin-top: 0px;
+    border: 0px;
+}
+
+.main-nav ul {
+    text-align: center;
+    background-color: #007bff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.main-nav ul>li,
+.main-nav a {
+    list-style: none;
+    display: inline-block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 80px;
+    font-weight: normal;
+}
+
+.o-mnie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.o-mnie-paragraf {
+    width: 550px;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+/*.o-mnie p {
+    text-align: center;
+    width: 550px;
+    font-size: 12px;
+}*/
+
+[alt="o-mnie"] {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+}

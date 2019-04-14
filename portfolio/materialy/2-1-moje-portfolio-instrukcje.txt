@@ -1,0 +1,23 @@
+Moje Portfolio - Instrukcje:
+
+1. Tworzymy repozytorium kodu GIT
+
+2. Tworzymy w repozytorium strukturę katalogów projektu
+
+3. W sekcji <head></head> dołącz:
+    - normalize.css
+    - Google Fonts
+    - Font Awesome
+    - TWOJE STYLE
+
+4. Tworzymy strukturę strony - przeważnie od góry - w przypadku naszej strony po koleji:
+    - Header (Nagłówek) - z głównym nagłówkiem i obrazem w tle
+    - Nawigacja - MENU strony
+    - Sekcja "O mnie"
+    - Sekcja "Portfolio"
+    - Sekcja "Kontakt"
+    - Footer (Stopka)
+    
+5. Następnie podpinamy własne style np. css/style.css i stylujemy od góry każdą sekcję (analogicznie jak w punkcie powyżej)
+
+6. Na końcu stylujemy "Responsywność" projektu (dopasowanie do urządzeń mobilnych) - jeśli oczywiście projekt to przewiduje
