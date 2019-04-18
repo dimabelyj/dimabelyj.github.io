@@ -1,0 +1,221 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    color: #2a6fc2;
+    font-size: 70px;
+}
+
+.main-header {
+    height: 350px;
+    width: 100%;
+    background-color: #c9c9c9;
+    position: relative;
+}
+
+.main-h {
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#triangle-topleft {
+    position: absolute;
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-top: 350px solid blue;
+    border-right: 405px solid transparent;
+}
+
+
+/* menu nav*/
+
+nav {
+    height: 70px;
+    background-color: white;
+    text-align: end;
+}
+
+nav ul {
+    margin-top: 0px;
+}
+
+nav ul>li {
+    display: inline-block;
+    padding-left: 40px;
+    padding-top: 12px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+
+/* sekcja O-mnie*/
+
+.o-mnie,
+.main-contact {
+    background-color: #edce95;
+    position: relative;
+    height: 600px;
+}
+
+.o-mnie h2,
+.main-portfolio h2,
+.main-contact h2 {
+    margin-top: 0px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.o-mnie .o-mnie-paragraf {
+    background-color: white;
+    width: 40%;
+    height: 430px;
+    position: absolute;
+    left: 395px;
+    top: 100px;
+}
+
+.o-mnie .o-mnie-paragraf p {
+    margin-top: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 35px;
+}
+
+
+/*decoracja sekcji O-mnie*/
+
+.main-circ-o-mnie {
+    background-color: #808080;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.circ1 {
+    left: 369px;
+    top: 75px;
+}
+
+.circ2 {
+    left: 902px;
+    top: 75px;
+}
+
+.circ3 {
+    left: 369px;
+    top: 505px;
+}
+
+.circ4 {
+    left: 902px;
+    top: 505px;
+}
+
+
+/* sekcja Portfolio*/
+
+.main-portfolio {
+    height: 400px;
+    background-color: white;
+    position: relative;
+}
+
+.main-circ1-portfolio {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #808080;
+    position: absolute;
+    top: 150px;
+}
+
+.main-circ2-portfolio {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #2a6fc2;
+    position: absolute;
+    top: 135px;
+}
+
+.circ5 {
+    left: 116.5px;
+}
+
+.circ6 {
+    left: 416.5px;
+}
+
+.circ7 {
+    left: 716.5px;
+}
+
+.circ8 {
+    left: 1016.5px;
+}
+
+.circ9 {
+    left: 201.5px;
+}
+
+.circ10 {
+    left: 501.5px;
+}
+
+.circ11 {
+    left: 801.5px;
+}
+
+.circ12 {
+    left: 1101.5px;
+}
+
+
+/*sekcja kontakt*/
+
+.main-contact {
+    height: 400px;
+}
+
+.contact-paragraf {
+    position: absolute;
+    left: 390px;
+    top: 100px;
+    width: 40%;
+    height: 200px;
+    background-color: #2a6fc2;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.main-circ-contact {
+    position: absolute;
+    background-color: #808080;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.circ13 {
+    left: 365px;
+    top: 130px;
+}
+
+.circ14 {
+    left: 898px;
+    top: 220px;
+}
