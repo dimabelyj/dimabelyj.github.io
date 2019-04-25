@@ -1,36 +1,43 @@
-.main {
+body {
+    margin: 0px;
+    display: flex;
     background-image: url(obrazy/man-1.jpg);
-    background-size: 100% 100%;
-    width: 96%;
-    margin: 0 auto;
-    color: white;
-    height: 600px;
-    position: relative;
+    background-size: cover;
+    width: 100vw;
+    height: 110vh;
 }
 
 .main-h {
-    position: absolute;
-    top: 230px;
-    left: 50px;
+    color: white;
+    margin-left: 50px;
+    align-self: center;
 }
 
 @media (min-width:992px) and (max-width:1170px) {
-    .main {
+    body {
         background-image: url(obrazy/man-2.jpg);
+        justify-content: flex-end;
     }
     .main-h {
-        top: 12%;
-        left: 55%;
+        margin-right: 30px;
+        align-self: center;
     }
 }
 
 @media (max-width: 992px) {
-    .main {
-        color: black;
-        text-align: center;
+    body {
+        background-image: none;
+        flex-wrap: wrap;
+    }
+    .item {
+        background-image: url(obrazy/man-1.jpg);
+        background-size: cover;
+        width: 100vw;
+        height: 110vh;
     }
     .main-h {
-        top: 100%;
-        left: 20%;
+        color: black;
+        text-align: center;
+        flex-grow: 1;
     }
 }
