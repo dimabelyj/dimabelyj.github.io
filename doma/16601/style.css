@@ -1,43 +1,47 @@
-body {
+.main {
     margin: 0px;
     display: flex;
     background-image: url(obrazy/man-1.jpg);
     background-size: cover;
     width: 100vw;
-    height: 110vh;
+    height: 100vh;
 }
 
-.main-h {
+.text {
     color: white;
     margin-left: 50px;
     align-self: center;
 }
 
 @media (min-width:992px) and (max-width:1170px) {
-    body {
+    .main {
         background-image: url(obrazy/man-2.jpg);
         justify-content: flex-end;
+        width: 100vw;
+        height: 100vh;
     }
-    .main-h {
+    .text {
         margin-right: 30px;
         align-self: center;
     }
 }
 
 @media (max-width: 992px) {
-    body {
+    .main {
         background-image: none;
         flex-wrap: wrap;
+        height: 50%;
     }
     .item {
         background-image: url(obrazy/man-1.jpg);
         background-size: cover;
         width: 100vw;
-        height: 110vh;
+        height: 100vh;
     }
-    .main-h {
+    .text {
         color: black;
         text-align: center;
         flex-grow: 1;
+        justify-content: center;
     }
 }
