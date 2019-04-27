@@ -1,7 +1,11 @@
 'use strict'
 
 const PI = 3.14;
+
+
 //  dla js5
+
+
 // function poleKola(r) {
 //     let poleKola = PI * r * r;
 //     console.log(poleKola);
