@@ -23,3 +23,11 @@ span {
     background-color: yellow;
     color: blue;
 }
+
+#parSecond {
+    border: 1px solid red;
+}
+
+#parWParSecond {
+    background-color: yellow;
+}
