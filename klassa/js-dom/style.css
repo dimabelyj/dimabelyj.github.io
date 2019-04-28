@@ -1,0 +1,16 @@
+#main-header {
+    transition: all 2s linear;
+}
+
+#container {
+    background-color: beige;
+}
+
+.even {
+    background-color: orange;
+}
+
+span {
+    padding: 0 20px;
+    border-right: 1px solid red;
+}
