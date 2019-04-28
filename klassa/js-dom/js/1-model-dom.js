@@ -6,7 +6,7 @@ console.log(window);
 console.log(window.innerHeight);
 console.log(window.outerHeight);
 
-// pobranie elementu po id. klasie
+// pobranie elementu po id. klasie z pliku, w którym pracujemy
 console.log(document);
 console.log(document.documentElement);
 console.log(document.head);
