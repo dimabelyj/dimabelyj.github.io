@@ -18,3 +18,8 @@ span {
 .btn {
     background-color: aqua;
 }
+
+.active {
+    background-color: yellow;
+    color: blue;
+}
