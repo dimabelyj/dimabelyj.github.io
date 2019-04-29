@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 /* let parSecond = document.querySelector('#parSecond');
 console.log(parSecond);
 const klikAlert = () => {
