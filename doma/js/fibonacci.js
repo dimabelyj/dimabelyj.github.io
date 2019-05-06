@@ -7,9 +7,9 @@ const fibonacci = (n) => {
     } else if (n == 1) {
         return 1;
     } else {
-        let wynik = fibonacci(n - 1) + fibonacci(n - 2);
-        return wynik;
+        let result = fibonacci(n - 1) + fibonacci(n - 2);
+        return result;
     }
 
 }
-console.log(fibonacci(13));
+console.log(fibonacci(15));

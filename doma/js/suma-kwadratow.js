@@ -1,10 +1,11 @@
 'use strict';
+let iter = [1, 2, 3, 4, 5, 6];
+const mojaFunkcja = (iter) => {
 
-const mojaFunkcja = () => {
-    let iter = [1, 2, 3, 4, 5, 6];
-    for (let value of iter) {
-        value = Math.sqrt(iter[0]) + Math.sqrt(iter[1]) + Math.sqrt(iter[2]) + Math.sqrt(iter[3]) + Math.sqrt(iter[4]) + Math.sqrt(iter[5]);
-        console.log(value);
+    let value = 0;
+    for (let i = 0; i < iter.length; i++) {
+        value = value + Math.sqrt(iter[i]);
     }
+    console.log(value);
 }
-mojaFunkcja();
+mojaFunkcja(iter);
