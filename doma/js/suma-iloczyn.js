@@ -7,7 +7,7 @@ const mojaFunkcja = () => {
     debugger;
 
     for (let i = 0; i < iter.length; i++) {
-        value = value + iter[i];
+        value += iter[i];
         value1 = value1 * iter[i];
 
     }

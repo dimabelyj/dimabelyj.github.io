@@ -4,7 +4,7 @@ const mojaFunkcja = (iter) => {
 
     let value = 0;
     for (let i = 0; i < iter.length; i++) {
-        value = value + Math.sqrt(iter[i]);
+        value += (iter[i]) ** 2;
     }
     console.log(value);
 }

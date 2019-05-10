@@ -36,7 +36,9 @@ const iloscPrzeczytanych = (books) => {
 
     }
     console.log(countReaded);
-
 }
+
+
+
 debugger;
 iloscPrzeczytanych(books);
