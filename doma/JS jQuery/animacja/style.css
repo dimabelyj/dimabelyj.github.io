@@ -1,0 +1,14 @@
+#sque {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    opacity: 0;
+    font-size: 20px;
+    text-align: center;
+    color: yellow;
+}
