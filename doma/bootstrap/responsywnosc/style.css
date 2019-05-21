@@ -35,11 +35,6 @@ p {
     margin-top: 20px;
 }
 
-
-/* .row {
-    justify-content: center;
-} */
-
 .par {
     width: 120px;
     text-align: center;
@@ -48,5 +43,5 @@ p {
 }
 
 span {
-    transform: translateY(10px);
+    vertical-align: -3px;
 }
