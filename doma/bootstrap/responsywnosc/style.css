@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 100px;
+    color: gray;
+}
+
+hr {
+    width: 300px;
+}
+
+i {
+    color: rgb(230, 152, 8);
+}
+
+p {
+    text-align: center;
+}
+
+.form {
+    height: 120px;
+    width: 120px;
+    border-radius: 60px;
+    background: rgb(246, 242, 242);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+
+/* .row {
+    justify-content: center;
+} */
+
+.par {
+    width: 120px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+span {
+    transform: translateY(10px);
+}
