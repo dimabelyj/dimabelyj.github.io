@@ -42,9 +42,9 @@ $(function() {
             'margin-left': marginLeft
         }, 1000, function() {
             curentTitle.fadeIn();
-
+            indexCounter = newIndex;
         });
-        indexCounter = newIndex;
+
 
     }
 });

@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* [class^='container'] {
+    height: 200px;
+    background-color: burlywood;
+}
+
+[class^='container']:last-of-type {
+    background-color: red;
+} */
+
+.item {
+    height: 100px;
+    margin-bottom: 50px;
+    background: orange;
+}
+
+.item:nth-of-type(2) {
+    background: #ccc;
+}
+
+.item:nth-of-type(3) {
+    background: green;
+}

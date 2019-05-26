@@ -1,0 +1,75 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//  zmienne
+$color-blue: #001d8a;
+$color-gold: #ecd407;
+$color-default: #292929;
+$color-text: white;
+// koniec zmiennych
+.header {
+    height: 100vh;
+    background: url(../img/background.png) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    .header-main-name {
+        display: flex;
+        justify-content: space-around;
+    }
+    .header-name {
+        display: flex;
+        margin-top: 30px;
+        align-items: baseline;
+    }
+    .header-call {
+        display: flex;
+        margin-top: 30px;
+        .header-call-icon,
+        .header-paragrafs {
+            align-self: center;
+            color: $color-text;
+            p {
+                margin: 0 10px;
+            }
+            p:first-of-type {
+                font-size: 12px;
+            }
+        }
+    }
+    .fa-university,
+    span {
+        color: $color-gold;
+    }
+    h1 {
+        color: $color-text;
+        margin-left: 10px;
+    }
+    .header-send-menu {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        margin-right: 185px;
+    }
+    .header-send-h3 {
+        width: 24%;
+        color: $color-text;
+    }
+    .header-send-block-text {
+        color: $color-text;
+    }
+    .header-send-block {
+        background-color: $color-blue;
+        width: 24%;
+    }
+    .header-send-block-text {
+        font-size: 14px;
+    }
+}
+
+.field-item {
+    margin: 8px 0;
+}

@@ -12,4 +12,5 @@ const fibonacci = (n) => {
     }
 
 }
+debugger;
 console.log(fibonacci(15));

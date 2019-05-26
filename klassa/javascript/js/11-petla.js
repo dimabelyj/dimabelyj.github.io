@@ -5,13 +5,13 @@
 }
  */
 
-let tablica = ['krystian', 'Monika', 'danuta'];
+let tablica = ['Krystian', 'Monika', 'Danuta'];
 for (let i = 0; i < tablica.length; ++i) {
     console.log(tablica[i]);
 }
 //  element i index  (dla tablicy tak jest ze element Krystian ma index 0) czyli tak działa  forEach
 const iteruj = (element, index) => {
-    console.log('element z indexem:' + index + 'ma wartosc' + element);
+    console.log('element z indexem: ' + index + ' ma wartosc ' + element);
 }
 tablica.forEach(iteruj)
 

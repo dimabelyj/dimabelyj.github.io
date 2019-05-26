@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- podpinanie bootstrap zawsze przed stylami -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bootrstrap</title>
+</head>
+
+<body>
+
+    <!-- buttony -->
+    <div class="py-5">
+        <button class="btn btn-primary btn-lg">button1</button>
+        <button class="btn btn-outline-warning btn-sm">button2</button>
+        <button class="btn btn-danger">button4</button>
+        <button class="btn btn-link">button3</button>
+        <button class="btn">button5</button>
+    </div>
+
+
+    <!--!!! bootstrap używamy tylko i wyłącznie na .container i .container-fluid!!! -->
+    <!-- widac różnicę pomiędzy .container a .container-fluid -->
+
+    <!-- grid -->
+    <!-- grid wymaga odpowiedniej struktury. Zaczynamy od elementu container lub container-fluid, w nim KONIECZNIE umieściamy elemenet z klassą row i dopiero wtwdy możemy używać elementów elementów kolumn z klasami .col-* Jeśli nie zachowamy tej struktury siatka nam nie zadziała!!! -->
+    <div class="container">
+        <div class="row">
+            <p class="item col-lg-4 col-md-6 col-sm-2 col-6 text-center text-uppercase">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem optio distinctio provident! Officiis, totam aliquid consequuntur omnis alias corporis accusantium, voluptas incidunt praesentium repellendus minima tempore sint nulla earum eaque.
+            </p>
+            <!-- 
+                > 992px układ 4 kolumny 12/4 (lg)
+                >768px && < 992px układ 2 kol. 12/6 (md)
+                >576 && <768 px 12/2 (sm)
+                <576 12/6 (brak prefiksu)
+             -->
+            <p class="item col-lg-4 col-md-6 text-right">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsa nesciunt velit quam quis non doloremque vero culpa labore, esse quidem repellendus, consectetur totam nisi tenetur similique facilis aperiam odit.
+            </p>
+            <p class="item col-lg-4 col-md-12 text-justify text-capitalize">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus provident earum architecto vero reiciendis eligendi repudiandae molestias unde blanditiis, error magni eum voluptatem quis maiores aliquam aperiam, nostrum amet sed!
+            </p>
+        </div>
+    </div>
+    <!-- /grid -->
+
+
+    <!-- kontenery -->
+    <!-- <div class="container"></div>
+    <div class="container-fluid"></div> -->
+    <!-- /kontenery -->
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link {
+    color: #c2c2c2;
+    font-size: 15px;
+}
+
+.navbar-brand {}
+
+.poster {
+    height: 100vh;
+    background: url(img/form-background.jpg) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.form {
+    background-color: rgba(0, 0, 0, 0.35)
+}
+
+form h1 {
+    color: white;
+}
+
+form h2 {
+    color: #c2c2c2;
+}
+
+form .fa-pencil-alt {
+    font-size: 45px;
+    color: #c2c2c2;
+}
+
+.col-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.send-menu {
+    width: 100%
+}

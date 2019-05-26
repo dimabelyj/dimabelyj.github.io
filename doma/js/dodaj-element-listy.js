@@ -13,7 +13,7 @@ const myFunction = () => {
     listItem.innerHTML = 'Item ' + (mainHeader.length + 1);
     mainUl.appendChild(listItem);
 }
-let newArr = document.getElementById("button");
-newArr.addEventListener("click", myFunction);
+let newArr = document.getElementById("button").addEventListener("click", myFunction);
+// newArr
 
 document.body.appendChild(listItem);

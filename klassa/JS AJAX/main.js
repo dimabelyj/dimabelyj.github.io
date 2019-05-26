@@ -13,7 +13,7 @@
     console.log(response);
 }) */
 
-// 3. AJAX - $.getJSON() (jeszcze jedna metoda) w przypadku błędu pokaże gdzie konkretnie nie działa funkcja (jeżeli usunąć ze słowa users na koncu linka s, to pokaże bląd)
+// 3. AJAX - $.getJSON() jQuery (jeszcze jedna metoda) w przypadku błędu pokaże gdzie konkretnie nie działa funkcja (jeżeli usunąć ze słowa users na koncu linka s, to pokaże bląd)
 
 /* $.ajax({
     url: "https://jsonplaceholder.typicode.com/users",

@@ -1,0 +1,84 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 100vh;
+    background: url(../img/background.png) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.header .header-main-name {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header .header-name {
+    display: flex;
+    margin-top: 30px;
+    align-items: baseline;
+}
+
+.header .header-call {
+    display: flex;
+    margin-top: 30px;
+}
+
+.header .header-call .header-call-icon,
+.header .header-call .header-paragrafs {
+    align-self: center;
+    color: white;
+}
+
+.header .header-call .header-call-icon p,
+.header .header-call .header-paragrafs p {
+    margin: 0 10px;
+}
+
+.header .header-call .header-call-icon p:first-of-type,
+.header .header-call .header-paragrafs p:first-of-type {
+    font-size: 12px;
+}
+
+.header .fa-university,
+.header span {
+    color: #ecd407;
+}
+
+.header h1 {
+    color: white;
+    margin-left: 10px;
+}
+
+.header .header-send-menu {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 185px;
+}
+
+.header .header-send-h3 {
+    width: 24%;
+    color: white;
+}
+
+.header .header-send-block-text {
+    color: white;
+}
+
+.header .header-send-block {
+    background-color: #001d8a;
+    width: 24%;
+}
+
+.header .header-send-block-text {
+    font-size: 14px;
+}
+
+.field-item {
+    margin: 8px 0;
+}

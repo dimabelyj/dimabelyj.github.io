@@ -1,0 +1,7 @@
+/* wyrównać wszystkie obrazki żeby był jeden rozmiar */
+
+.carousel img {
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+}
