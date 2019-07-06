@@ -22,16 +22,13 @@ class Counter extends Component {
            });
        }
        clearValue = () =>{
-           console.log('dziala Zero');
            this.setState(({counterValue: 0}));
        }
        resetValue = () =>{
-          console.log('dziala reset');
           this.setState(({counterValue: this.props.initValue}))
        }
        newCounter = (newValue) => {
            this.setState(({counterValue: newValue}))
-           console.log('dziala newValue');
        } 
        stepCounter = (newObjInput) => {
            console.log('dziala stepValue');
