@@ -28,6 +28,10 @@ let startBtn = document.getElementById("start"),
 let money,
     time;
 
+expensesBtn.disabled = true;
+optionalExpensesBtn.disabled = true;
+countBtn.disabled = true;
+
 startBtn.addEventListener('click', () => {
     money = +prompt("Your monthly budget?", '');
     time = prompt('Enter date in format YYYY-MM-DD', '');
@@ -42,6 +46,10 @@ startBtn.addEventListener('click', () => {
     yearValue.value = new Date(Date.parse(time)).getFullYear();
     monthValue.value = new Date(Date.parse(time)).getMonth() + 1;
     dayValue.value = new Date(Date.parse(time)).getDate();
+
+    expensesBtn.disabled = false;
+    optionalExpensesBtn.disabled = false;
+    countBtn.disabled = false;   
 });
 
 expensesBtn.addEventListener('click', () => {
@@ -76,7 +84,7 @@ optionalExpensesBtn.addEventListener('click', () => {
 countBtn.addEventListener('click', () => {
     if (appData.budget != undefined) {
         // Задаем количество знаков после запятой
-        appData.moneyPerDay = ((appData.budget - +expensesValue.textContent) / 30).toFixed();
+        appData.moneyPerDay = ((appData.budget - +expensesValue.textContent) / 30).toFixed(2);
         dayBudgetValue.textContent = appData.moneyPerDay;
         if (appData.moneyPerDay < 100) {
             levelValue.textContent = 'Minimum level of wealth';
@@ -94,11 +102,11 @@ countBtn.addEventListener('click', () => {
 
 incomeItem.addEventListener('input', () => {
     let items = incomeItem.value;
-    console.log(1);
     if (isNaN(items) || items != '') {
         appData.income = items.split(',');
         incomeValue.textContent = appData.income;
     } 
+    console.log(appData.income);
 });
 
 checkSavings.addEventListener('click', () => {
