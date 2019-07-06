@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const fibonacci = (n) => {
 
@@ -11,6 +11,6 @@ const fibonacci = (n) => {
         return result;
     }
 
-}
-debugger;
+};
+
 console.log(fibonacci(15));
