@@ -1,9 +1,9 @@
 'use strict';
 
-/* for (let i = 10; i > 1; i--) {
+for (let i = 10; i > 1; i--) {
     console.log(i);
 }
- */
+
 
 let tablica = ['Krystian', 'Monika', 'Danuta'];
 for (let i = 0; i < tablica.length; ++i) {
@@ -23,23 +23,30 @@ let person = {
 for (let key in person) {
     console.log(person[key]);
 }
+
+
 let iterable = [10, 20, 30];
 for (let value of iterable) {
     value += 1;
     console.log(value);
-}
-let it = 0;
+};
 
+
+let it = 0;
 while (it < 10) {
     console.log(it);
     it++;
-}
+};
+
+
 let iter = 20;
 do {
     console.log(iter + ' dowhile');
     iter++;
     console.log(iter + ' dowhile');
-} while (iter < 10)
+} while (iter < 10);
+
+
 
 let a = 0;
 while (a < 10) {
