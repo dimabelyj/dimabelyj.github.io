@@ -23,8 +23,9 @@ let startBtn = document.getElementById("start"),
     yearValue = document.querySelector('.year-value'),
     monthValue = document.querySelector('.month-value'),
     dayValue = document.querySelector('.day-value'),
+    dataList = document.querySelector('.data'),
     buttonsAddExpenses = document.getElementsByClassName('data-buttons')[0];
-
+console.log(dataList);
 
 // создана кнопка добавления затрат
 let newExpensesButton = document.createElement('button');
@@ -32,8 +33,23 @@ newExpensesButton.setAttribute('class', 'expenses-item-btn add-expenses');
 buttonsAddExpenses.appendChild(newExpensesButton);
 let textBtn = document.createTextNode('Add expenses');
 newExpensesButton.appendChild(textBtn);
-console.log(newExpensesButton);
 
+// создание поля для введения новых затрат
+newExpensesButton.addEventListener('click', () => {
+    let newExpensesArea = document.createElement('input');
+    newExpensesArea.setAttribute('class', 'expenses-item');
+    newExpensesArea.setAttribute('type', 'text');
+    // newExpensesArea.setAttribute('id', 'expenses_3');
+    newExpensesArea.setAttribute('placeholder', 'Name');
+    dataList.insertBefore(newExpensesArea, buttonsAddExpenses);
+    let newExpensesAreaPrice = document.createElement('input');
+    newExpensesAreaPrice.setAttribute('class', 'expenses-item');
+    newExpensesAreaPrice.setAttribute('type', 'text');
+    // newExpensesAreaPrice.setAttribute('id', 'expenses_4');
+    newExpensesAreaPrice.setAttribute('placeholder', 'Price');
+    dataList.insertBefore(newExpensesAreaPrice, buttonsAddExpenses);
+    console.log(newExpensesArea);
+});
 
 let money,
     time;
@@ -41,6 +57,7 @@ let money,
 expensesBtn.disabled = true;
 optionalExpensesBtn.disabled = true;
 countBtn.disabled = true;
+// newExpensesButton.disabled = true;
 
 startBtn.addEventListener('click', () => {
     money = +prompt("Your monthly budget?", '');
@@ -59,7 +76,8 @@ startBtn.addEventListener('click', () => {
 
     expensesBtn.disabled = false;
     optionalExpensesBtn.disabled = false;
-    countBtn.disabled = false;   
+    countBtn.disabled = false;
+    // newExpensesButton.disabled = false;   
 });
 
 expensesBtn.addEventListener('click', () => {
@@ -72,7 +90,7 @@ expensesBtn.addEventListener('click', () => {
 
         if ((typeof (a)) === 'string' && (typeof (a)) != null && (typeof (b)) != null &&
             a != '' && b != '' && a.length < 50) {
-            console.log('done');
+            // console.log('done');
             appData.expenses[a] = b;
             sum += +b;
         } else {
@@ -116,7 +134,7 @@ incomeItem.addEventListener('input', () => {
         appData.income = items.split(',');
         incomeValue.textContent = appData.income;
     } 
-    console.log(appData.income);
+    // console.log(appData.income);
 });
 
 checkSavings.addEventListener('click', () => {
@@ -158,5 +176,6 @@ let appData = {
     timeData: time,
     savings: false
 };
+console.log(appData);
    
    
