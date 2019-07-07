@@ -83,6 +83,13 @@ a {
   font-size: 12px;
   cursor: pointer; }
 
+.data .add-expenses {
+  margin-top: 10px;
+  width: 60px;
+  height: 20px;
+  font-size: 9px;
+  color: red; }
+
 .data .optionalexpenses-item {
   width: calc((100%/3) - 4px); }
 

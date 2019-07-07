@@ -22,7 +22,17 @@ let startBtn = document.getElementById("start"),
     percentValue = document.querySelector('.choose-percent'),
     yearValue = document.querySelector('.year-value'),
     monthValue = document.querySelector('.month-value'),
-    dayValue = document.querySelector('.day-value');
+    dayValue = document.querySelector('.day-value'),
+    buttonsAddExpenses = document.getElementsByClassName('data-buttons')[0];
+
+
+// создана кнопка добавления затрат
+let newExpensesButton = document.createElement('button');
+newExpensesButton.setAttribute('class', 'expenses-item-btn add-expenses');
+buttonsAddExpenses.appendChild(newExpensesButton);
+let textBtn = document.createTextNode('Add expenses');
+newExpensesButton.appendChild(textBtn);
+console.log(newExpensesButton);
 
 
 let money,

@@ -70,9 +70,16 @@ a{
         &::placeholder{
             opacity: .3
         }
-    }
+    }  
     .expenses-item-btn, .optionalexpenses-btn, .count-budget-btn{
         @include btn;
+    }
+    .add-expenses{
+        margin-top: 10px;
+        width: 60px;
+        height: 20px;
+        font-size: 9px;
+        color: red
     }
     .optionalexpenses-item{
         width: calc((100%/3) - 4px);
