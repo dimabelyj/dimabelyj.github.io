@@ -36,19 +36,31 @@ newExpensesButton.appendChild(textBtn);
 
 // создание поля для введения новых затрат
 newExpensesButton.addEventListener('click', () => {
+    let newExpenses = document.createElement('div');
+    newExpenses.setAttribute('class', 'new-expenses');
     let newExpensesArea = document.createElement('input');
     newExpensesArea.setAttribute('class', 'expenses-item');
     newExpensesArea.setAttribute('type', 'text');
     // newExpensesArea.setAttribute('id', 'expenses_3');
     newExpensesArea.setAttribute('placeholder', 'Name');
-    dataList.insertBefore(newExpensesArea, buttonsAddExpenses);
+    // Вариант с дивом
+    newExpenses.appendChild(newExpensesArea);
     let newExpensesAreaPrice = document.createElement('input');
     newExpensesAreaPrice.setAttribute('class', 'expenses-item');
     newExpensesAreaPrice.setAttribute('type', 'text');
     // newExpensesAreaPrice.setAttribute('id', 'expenses_4');
     newExpensesAreaPrice.setAttribute('placeholder', 'Price');
-    dataList.insertBefore(newExpensesAreaPrice, buttonsAddExpenses);
-    console.log(newExpensesArea);
+    newExpenses.appendChild(newExpensesAreaPrice);
+    dataList.insertBefore(newExpenses, buttonsAddExpenses);
+
+    // !!!!! Рабочий вариант!!!!
+    // dataList.insertBefore(newExpensesArea, buttonsAddExpenses);
+    /* let newExpensesAreaPrice = document.createElement('input');
+    newExpensesAreaPrice.setAttribute('class', 'expenses-item');
+    newExpensesAreaPrice.setAttribute('type', 'text');
+    // newExpensesAreaPrice.setAttribute('id', 'expenses_4');
+    newExpensesAreaPrice.setAttribute('placeholder', 'Price');
+    dataList.insertBefore(newExpensesAreaPrice, buttonsAddExpenses); */
 });
 
 let money,
