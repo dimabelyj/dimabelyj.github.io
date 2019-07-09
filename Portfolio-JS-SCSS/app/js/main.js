@@ -1,6 +1,5 @@
 'use strict';
-
-// получение элементов 
+ 
 
 let startBtn = document.getElementById("start"),
     budgetValue = document.getElementsByClassName('budget-value')[0],
@@ -27,40 +26,32 @@ let startBtn = document.getElementById("start"),
     buttonsAddExpenses = document.getElementsByClassName('data-buttons')[0];
 console.log(dataList);
 
-// создана кнопка добавления затрат
+// tworzenie przycisku dla nowych wytrat
 let newExpensesButton = document.createElement('button');
 newExpensesButton.setAttribute('class', 'expenses-item-btn add-expenses');
 buttonsAddExpenses.appendChild(newExpensesButton);
 let textBtn = document.createTextNode('Add expenses');
 newExpensesButton.appendChild(textBtn);
 
-// создание поля для введения новых затрат
+// tworzenie inputów dla nowych wytrat
 newExpensesButton.addEventListener('click', () => {
     let newExpenses = document.createElement('div');
     newExpenses.setAttribute('class', 'new-expenses');
+
     let newExpensesArea = document.createElement('input');
     newExpensesArea.setAttribute('class', 'expenses-item');
     newExpensesArea.setAttribute('type', 'text');
-    // newExpensesArea.setAttribute('id', 'expenses_3');
     newExpensesArea.setAttribute('placeholder', 'Name');
-    // Вариант с дивом
     newExpenses.appendChild(newExpensesArea);
+
     let newExpensesAreaPrice = document.createElement('input');
-    newExpensesAreaPrice.setAttribute('class', 'expenses-item');
+    newExpensesAreaPrice.setAttribute('class', 'expenses-item new-expenses-item');
     newExpensesAreaPrice.setAttribute('type', 'text');
-    // newExpensesAreaPrice.setAttribute('id', 'expenses_4');
     newExpensesAreaPrice.setAttribute('placeholder', 'Price');
     newExpenses.appendChild(newExpensesAreaPrice);
+    
     dataList.insertBefore(newExpenses, buttonsAddExpenses);
-
-    // !!!!! Рабочий вариант!!!!
-    // dataList.insertBefore(newExpensesArea, buttonsAddExpenses);
-    /* let newExpensesAreaPrice = document.createElement('input');
-    newExpensesAreaPrice.setAttribute('class', 'expenses-item');
-    newExpensesAreaPrice.setAttribute('type', 'text');
-    // newExpensesAreaPrice.setAttribute('id', 'expenses_4');
-    newExpensesAreaPrice.setAttribute('placeholder', 'Price');
-    dataList.insertBefore(newExpensesAreaPrice, buttonsAddExpenses); */
+    console.log(newExpenses);
 });
 
 let money,
@@ -69,13 +60,13 @@ let money,
 expensesBtn.disabled = true;
 optionalExpensesBtn.disabled = true;
 countBtn.disabled = true;
-// newExpensesButton.disabled = true;
+newExpensesButton.disabled = true;
 
 startBtn.addEventListener('click', () => {
     money = +prompt("Your monthly budget?", '');
     time = prompt('Enter date in format YYYY-MM-DD', '');
-    // проверка вводной строки бюджета, чтоб пользователь не мог ввести ничего ероме цифр. 
-    // (первое условие если не цифры или строка остается пустой или чтоб пользователь не нажал кнопк4у отмена)
+    // user może wpisać tylko cyfry
+    // (warunek pierwszy jeżeli nie cyfry lub pusty string lub nacisnęto przycisk odmowa)
     while (isNaN(money) || money == '' || money == null) {
         money = +prompt("Your monthly budget?", '');
     }
@@ -89,7 +80,7 @@ startBtn.addEventListener('click', () => {
     expensesBtn.disabled = false;
     optionalExpensesBtn.disabled = false;
     countBtn.disabled = false;
-    // newExpensesButton.disabled = false;   
+    newExpensesButton.disabled = false;   
 });
 
 expensesBtn.addEventListener('click', () => {
@@ -123,7 +114,7 @@ optionalExpensesBtn.addEventListener('click', () => {
 
 countBtn.addEventListener('click', () => {
     if (appData.budget != undefined) {
-        // Задаем количество знаков после запятой
+        // ilość cyferek po przycinku
         appData.moneyPerDay = ((appData.budget - +expensesValue.textContent) / 30).toFixed(2);
         dayBudgetValue.textContent = appData.moneyPerDay;
         if (appData.moneyPerDay < 100) {
@@ -188,6 +179,5 @@ let appData = {
     timeData: time,
     savings: false
 };
-console.log(appData);
    
    

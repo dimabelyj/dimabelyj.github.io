@@ -71,6 +71,9 @@ a{
             opacity: .3
         }
     }  
+    .new-expenses-item{
+    margin-left: 4px;
+    }
     .expenses-item-btn, .optionalexpenses-btn, .count-budget-btn{
         @include btn;
     }

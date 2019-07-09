@@ -69,6 +69,9 @@ a {
   .data .expenses-item::placeholder, .data .optionalexpenses-item::placeholder, .data .choose-income::placeholder, .data .choose-sum::placeholder, .data .choose-percent::placeholder {
     opacity: .3; }
 
+.data .new-expenses-item {
+  margin-left: 4px; }
+
 .data .expenses-item-btn, .data .optionalexpenses-btn, .data .count-budget-btn {
   width: 70px;
   height: 30px;
