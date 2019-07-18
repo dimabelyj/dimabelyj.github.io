@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
             seconds = Math.floor((t / 1000) % 60),
             minutes = Math.floor((t / 1000 / 60) % 60),
             hours = Math.floor((t / (1000 * 60 * 60)));
-        // if somebody needs with days and hours
+        // if somebody needs with days and hours just comment upper string
         /* hours = Math.floor((t/1000/60/60) % 24),
            days = Math.floor((t/(1000*60*60*24))); */
 
@@ -75,7 +75,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let tab = document.querySelectorAll('.info-header-tab'),
         info = document.querySelector('.info-header'),
         tabContent = document.querySelectorAll('.info-tabcontent');
-    console.log(tab);
+    
 
     const hideTabContent = (a) => {
         for (let i = a; i < tabContent.length; i++) {
@@ -106,6 +106,27 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    
+    //  Modal
+
+    let more = document.querySelector('.more'),
+        overlay = document.querySelector('.overlay'),
+        close = document.querySelector('.popup-close'),
+        modalBtn = document.querySelectorAll('.description-btn')[0];
+
+    const openModal = () => {
+        overlay.style.display = 'block';
+        this.className = 'more-splash';
+        document.body.style.overflow = 'hidden';
+    };
+
+    modalBtn.addEventListener('click', openModal);
+
+    more.addEventListener('click', openModal);
+
+    close.addEventListener('click', () => {
+        overlay.style.display = 'none';
+        more.classList.remove('more-splash');
+        document.body.style.overflow = '';
+    });
 
 });
