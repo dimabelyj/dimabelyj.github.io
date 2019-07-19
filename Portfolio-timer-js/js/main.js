@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // !!! Added timer !!!
 
-    let deadLine = '2019-07-19';
+    let deadLine = '2019-07-21';
 
     const getTimeRemaining = (endtime) => {
         let t = Date.parse(endtime) - Date.parse(new Date()),
@@ -111,7 +111,9 @@ window.addEventListener('DOMContentLoaded', () => {
     let more = document.querySelector('.more'),
         overlay = document.querySelector('.overlay'),
         close = document.querySelector('.popup-close'),
-        modalBtn = document.querySelectorAll('.description-btn')[0];
+        modalBtn = document.querySelectorAll('.description-btn');
+        console.log(modalBtn);
+        
 
     const openModal = () => {
         overlay.style.display = 'block';
@@ -119,7 +121,13 @@ window.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden';
     };
 
-    modalBtn.addEventListener('click', openModal);
+    const modalClickOnTabs = () =>{
+        for (let i = 0; i < modalBtn.length; i++){
+            modalBtn[i].addEventListener('click', openModal);
+        } 
+    };
+
+    modalClickOnTabs();
 
     more.addEventListener('click', openModal);
 
