@@ -152,14 +152,16 @@ window.addEventListener('DOMContentLoaded', () => {
     statusMessage.classList.add('status');
 
     form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        form.appendChild(statusMessage);
+        if (event.target.classList.contains('contact-form') || event.target.classList.contains('main-form')) {
+            event.preventDefault();
+            event.target.appendChild(statusMessage);
+        }
 
         let request = new XMLHttpRequest();
         request.open('POST', 'server.php');
         request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
 
-        let formData = new FormData(form);
+        let formData = new FormData(event.target);
 
         let obj = {};
         formData.forEach((value, key) => {
