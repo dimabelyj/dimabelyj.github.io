@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
             'minutes': minutes,
             'hours': hours
         };
-        
+
     };
 
     const setClock = (id, endtime) => {
@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
             hours = timer.querySelector('.hours'),
             minutes = timer.querySelector('.minutes'),
             seconds = timer.querySelector('.seconds');
-            
+
 
         const updateClock = () => {
             let t = getTimeRemaining(endtime);
@@ -37,15 +37,15 @@ window.addEventListener('DOMContentLoaded', () => {
             minutes.textContent = t.minutes;
             seconds.textContent = t.seconds;
 
-           /*  if (t.hours < 10) {
-                hours.textContent = '0' + t.hours;
-            }
-            if (t.minutes < 10){
-                minutes.textContent = '0' + t.minutes;
-            }
-            if (t.seconds < 10){
-                seconds.textContent = '0' + t.seconds;
-            } */
+            /*  if (t.hours < 10) {
+                 hours.textContent = '0' + t.hours;
+             }
+             if (t.minutes < 10){
+                 minutes.textContent = '0' + t.minutes;
+             }
+             if (t.seconds < 10){
+                 seconds.textContent = '0' + t.seconds;
+             } */
 
             const addZero = (num) => {
                 if (num <= 9) {
@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 seconds.textContent = '00';
             }
         };
-        
+
         let timeInterval = setInterval(updateClock, 1000);
     };
     setClock('timer', deadLine);
@@ -75,7 +75,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let tab = document.querySelectorAll('.info-header-tab'),
         info = document.querySelector('.info-header'),
         tabContent = document.querySelectorAll('.info-tabcontent');
-    
+
 
     const hideTabContent = (a) => {
         for (let i = a; i < tabContent.length; i++) {
@@ -112,8 +112,8 @@ window.addEventListener('DOMContentLoaded', () => {
         overlay = document.querySelector('.overlay'),
         close = document.querySelector('.popup-close'),
         modalBtn = document.querySelectorAll('.description-btn');
-        console.log(modalBtn);
-        
+    // console.log(modalBtn);
+
 
     const openModal = () => {
         overlay.style.display = 'block';
@@ -121,10 +121,10 @@ window.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden';
     };
 
-    const modalClickOnTabs = () =>{
-        for (let i = 0; i < modalBtn.length; i++){
+    const modalClickOnTabs = () => {
+        for (let i = 0; i < modalBtn.length; i++) {
             modalBtn[i].addEventListener('click', openModal);
-        } 
+        }
     };
 
     modalClickOnTabs();
@@ -135,6 +135,53 @@ window.addEventListener('DOMContentLoaded', () => {
         overlay.style.display = 'none';
         more.classList.remove('more-splash');
         document.body.style.overflow = '';
+    });
+
+    // Send form
+
+    let message = {
+        loading: 'Загрузка...',
+        success: 'Спасибо! Скоро мы с вами свяжемся!',
+        failure: 'Что-то пошло не так...'
+    };
+
+    let form = document.querySelector('.main-form'),
+        input = form.getElementsByTagName('input'),
+        statusMessage = document.createElement('div');
+
+    statusMessage.classList.add('status');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        form.appendChild(statusMessage);
+
+        let request = new XMLHttpRequest();
+        request.open('POST', 'server.php');
+        request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+
+        let formData = new FormData(form);
+
+        let obj = {};
+        formData.forEach((value, key) => {
+            obj[key] = value;
+        });
+        let json = JSON.stringify(obj);
+
+        request.send(json);
+
+        request.addEventListener('readystatechange', () => {
+            if (request.readyState < 4) {
+                statusMessage.innerHTML = message.loading;
+            } else if (request.readyState === 4 && request.status == 200) {
+                statusMessage.innerHTML = message.success;
+            } else {
+                statusMessage.innerHTML = message.failure;
+            }
+        });
+
+        for (let i = 0; i < input.length; i++) {
+            input[i].value = '';
+        }
     });
 
 });
