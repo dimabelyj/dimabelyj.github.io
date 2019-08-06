@@ -197,17 +197,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const showSlides = (n) => {
 
-        if (n > slides.length){
-            slideIndex = 1; 
+        if (n > slides.length) {
+            slideIndex = 1;
         }
-        if (n < 1){
+        if (n < 1) {
             slideIndex = slides.length;
         }
 
         slides.forEach((item) => item.style.display = 'none');
-       /*  for (let i = 0; i < slides.length; i++){
-            slides[i].style.display = 'none';
-        } */
+        /*  for (let i = 0; i < slides.length; i++){
+             slides[i].style.display = 'none';
+         } */
 
         dots.forEach((item) => item.classList.remove('dot-active'));
 
@@ -233,10 +233,57 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     dotsWrap.addEventListener('click', (event) => {
-        for (let i = 0; i < dots.length + 1; i++){
-            if (event.target.classList.contains('dot') && event.target == dots[i-1]){
+        for (let i = 0; i < dots.length + 1; i++) {
+            if (event.target.classList.contains('dot') && event.target == dots[i - 1]) {
                 currentSlide(i);
             }
+        }
+    });
+
+    //  Calculator
+
+    let persons = document.querySelectorAll('.counter-block-input')[0],
+        restDays = document.querySelectorAll('.counter-block-input')[1],
+        place = document.getElementById('select'),
+        totalValue = document.getElementById('total'),
+        personSum = 0,
+        daysSum = 0,
+        total = 0;
+
+    totalValue.innerHTML = 0;
+
+    persons.addEventListener('change', function () {
+        personSum = +this.value;
+        total = (personSum + daysSum) * 1800;
+
+        if (restDays.value == '' || persons.value == '') {
+            totalValue.innerHTML = 0;
+        } else {
+            totalValue.innerHTML = total;
+        }
+
+    });
+
+
+    restDays.addEventListener('change', function () {
+        daysSum = +this.value;
+        total = (personSum + daysSum) * 1800;
+
+        if (persons.value == '' || restDays.value == '') {
+            totalValue.innerHTML = 0;
+        } else {
+            totalValue.innerHTML = total;
+        }
+
+    });
+
+
+    place.addEventListener('change', function () {
+        if (restDays.value == '' || persons.value == '') {
+            totalValue.innerHTML == 0;
+        } else {
+            let a = total;
+            totalValue.innerHTML = a * this.options[this.selectedIndex].value;
         }
     });
 
