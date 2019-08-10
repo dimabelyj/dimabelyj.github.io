@@ -13,6 +13,7 @@ function form () {
     statusMessage.classList.add('status');
 
     form.addEventListener('submit', (event) => {
+
         if (event.target.classList.contains('contact-form') || event.target.classList.contains('main-form')) {
             event.preventDefault();
             event.target.appendChild(statusMessage);
@@ -33,6 +34,7 @@ function form () {
         request.send(json);
 
         request.addEventListener('readystatechange', () => {
+            
             if (request.readyState < 4) {
                 statusMessage.innerHTML = message.loading;
             } else if (request.readyState === 4 && request.status == 200) {

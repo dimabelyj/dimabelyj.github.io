@@ -11,6 +11,7 @@ function calculator() {
     totalValue.innerHTML = 0;
 
     persons.addEventListener('change', function () {
+
         personSum = +this.value;
         total = (personSum + daysSum) * 1800;
 
@@ -19,10 +20,10 @@ function calculator() {
         } else {
             totalValue.innerHTML = total;
         }
-
     });
 
     restDays.addEventListener('change', function () {
+
         daysSum = +this.value;
         total = (personSum + daysSum) * 1800;
 
@@ -31,10 +32,10 @@ function calculator() {
         } else {
             totalValue.innerHTML = total;
         }
-
     });
 
     place.addEventListener('change', function () {
+        
         if (restDays.value == '' || persons.value == '') {
             totalValue.innerHTML == 0;
         } else {

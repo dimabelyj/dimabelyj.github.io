@@ -1,8 +1,8 @@
 function tabs () {
+
     let tab = document.querySelectorAll('.info-header-tab'),
         info = document.querySelector('.info-header'),
         tabContent = document.querySelectorAll('.info-tabcontent');
-
 
     const hideTabContent = (a) => {
         for (let i = a; i < tabContent.length; i++) {
