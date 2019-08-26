@@ -16,7 +16,8 @@ class App extends Component {
       { name: 'Audi', year: 2016 },
       { name: 'Mazda', year: 2010 }
     ],
-    pageTitle: 'React component through "state"'
+    pageTitle: 'React component through "state"',
+    showCars: false
   }
 
   // создаем функцию для обработчика событий конструкция для урока Events
@@ -35,6 +36,19 @@ class App extends Component {
 
     this.setState({
       pageTitle: newTitle
+    })
+  }
+
+  // передвча данных из инпут
+  changeInput = (event) => {
+    this.setState({
+      pageTitle: event.target.value
+    })
+  }
+
+  toggleCarsHandler = () => {
+    this.setState({
+      showCars: !this.state.showCars
     })
   }
 
@@ -73,12 +87,24 @@ class App extends Component {
         <Events name={cars[0].name} year = {cars[0].year}/>
         <Events name={cars[1].name} year = {cars[1].year}/>
         <Events name={cars[2].name} year = {cars[2].year}/> */}
-        
+
         {/* Передаём параметр при помощи метода bind */}
-        <button 
+
+        {/* Передача данных из инпута */}
+
+        <input type="text" onChange={this.changeInput} />
+
+        {/* <button 
         onClick={this.changeTitleHandler.bind(this, 'Changed!!!')}
-        >Cange title</button>
-        <ParamToFunction
+        >Cange title</button> */}
+
+        {/* Для урока Работа с условными операторами */}
+        <button
+          onClick={this.toggleCarsHandler}
+        >Toggle cars</button>
+
+        {/* для урока  с инпутом и передачи параметров*/}
+        {/* <ParamToFunction
           name={cars[0].name}
           year={cars[0].year}
           onChangeTitle = {this.changeTitleHandler.bind(this, cars[0].name)}
@@ -92,8 +118,35 @@ class App extends Component {
           name={cars[2].name}
           year={cars[2].year} 
           onChangeTitle = {() => this.changeTitleHandler(cars[2].name)}
-          />
+          /> */}
 
+        {/*!!!!! Работа со списком (чтоб бесконечно не вводить теги вручную) !!!!!*/}
+
+        {/* {this.state.cars.map((car, index) => {
+          return (
+          <ParamToFunction 
+            key = {index}
+            name = {car.name}
+            year = {car.year}
+            onChangeTitle = {() => this.changeTitleHandler(car.name)}
+          />
+          )
+        })} */}
+
+        {/* Работа с условными операторами */}
+        {this.state.showCars
+          ? this.state.cars.map((car, index) => {
+            return (
+              <ParamToFunction
+                key={index}
+                name={car.name}
+                year={car.year}
+                onChangeTitle={() => this.changeTitleHandler(car.name)}
+              />
+            )
+          }) 
+          : null
+        }
       </div>
     );
 
