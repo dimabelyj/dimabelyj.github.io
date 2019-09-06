@@ -1,7 +1,7 @@
 import React from 'react';
-import './PassParamToComponent.css'
+import './../PassParamToComponent/PassParamToComponent'
 
-class PassParamToComponent extends React.Component{
+class Fragments extends React.Component{
 
   // componentWillReceiveProps(nextProps){
   //   console.log('PassParamToComponent componentWillReceiveProps', nextProps);
@@ -69,4 +69,4 @@ class PassParamToComponent extends React.Component{
   }
 }
 
-export default PassParamToComponent
+export default Fragments

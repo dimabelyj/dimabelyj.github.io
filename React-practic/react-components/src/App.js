@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import PassParamToComponent from './PassParamToComponent/PassParamToComponent';
+// import PassParamToComponent from './PassParamToComponent/PassParamToComponent';
+import ErrorBondary from './ErrorBondary/ErrorBondary';
+import Fragments from './Fragments/Fragments'
+import CounterForFragments from './CounterForFragments/CounterForFragments'
 
 class App extends Component {
 
@@ -8,7 +11,7 @@ class App extends Component {
     console.log('App constructor');
     super(props)
 
-    this.state ={
+    this.state = {
       cars: [
         { name: 'Ford', year: 2018 },
         // { name: 'Audi', year: 2016 },
@@ -49,11 +52,11 @@ class App extends Component {
     })
   }
 
-  componentWillMount() {
-    console.log('App componentWillMount');
-  }
+  // componentWillMount() {
+  //   console.log('App componentWillMount');
+  // }
 
-  componentDidMount(){
+  componentDidMount() {
     console.log('App componentDidMount');
   }
 
@@ -68,36 +71,41 @@ class App extends Component {
     return (
       <div style={divStyle}>
         {/* <h1 style={{ backgroundColor: 'green', color: 'blue' }}>{this.state.pageTitle}</h1> */}
-        <h1>{this.props.title}</h1>
-        {/* <input type="text" onChange={this.changeInput} /> */}
-        <button
-          onClick={this.toggleCarsHandler}
-        >Toggle cars</button>
+          <h1>{this.props.title}</h1>
+          
+          <CounterForFragments/>
+          <hr/>
+          {/* <input type="text" onChange={this.changeInput} /> */}
+          <button
+            style = {{marginTop: 20}}
+            onClick={this.toggleCarsHandler}
+          >Toggle cars</button>
 
-        {this.state.showCars
-          ? this.state.cars.map((car, index) => {
-            return (
-              <div style={{
-                width: 400,
-                margin: 'auto',
-                paddingTop: '20px'
-              }}>
-                <PassParamToComponent
-                  key={index}
-                  name={car.name}
-                  year={car.year}
-                  onChangeTitle={() => this.changeTitleHandler(car.name)}
-                  onChangeName={event => this.onChangeName(event.target.value, index)}
-                  onDelete={this.deleteHandler.bind(this, index)}
-                />
-              </div>
-            )
-          })
-          : null
-        }
+          {this.state.showCars
+            ? this.state.cars.map((car, index) => {
+              return (
+                <ErrorBondary key={index}>
+                  <div style={{
+                    width: 400,
+                    margin: 'auto',
+                    paddingTop: '20px'
+                    }}>
+                    <Fragments                     
+                      name={car.name}
+                      year={car.year}
+                      onChangeTitle={() => this.changeTitleHandler(car.name)}
+                      onChangeName={event => this.onChangeName(event.target.value, index)}
+                      onDelete={this.deleteHandler.bind(this, index)}
+                    />
+                  </div>
+                </ErrorBondary>
+              )
+            })
+            : null
+          }
       </div>
-    );
-  }
-}
-
-export default App;
+        );
+      }
+    }
+    
+    export default App;
