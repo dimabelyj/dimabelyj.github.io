@@ -9,10 +9,15 @@ export default class CounterForFragments extends Component{
     }
 
     addCounter =()=>{
-        this.setState({
-            counter: this.state.counter + 1
+        // this.setState({
+        //     counter: this.state.counter + 1
+        // })
+        // !!!правильное использование метода setState с передачей хранящегося предыдущего состояния prevState
+        this.setState((prevState) => {
+          return {
+              counter: prevState.counter + 1
+          }
         })
-        // console.log(this.state.counter);
     }
 
   render(){

@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 // import PassParamToComponent from './PassParamToComponent/PassParamToComponent';
 import ErrorBondary from './ErrorBondary/ErrorBondary';
-import Fragments from './Fragments/Fragments'
-import CounterForFragments from './CounterForFragments/CounterForFragments'
+// import Fragments from './Fragments/Fragments'
+import CounterForFragments from './CounterForFragments/CounterForFragments';
+import HighOrderComponent from './HighOrderComponent/HighOrderComponent';
 
 class App extends Component {
 
@@ -90,7 +91,7 @@ class App extends Component {
                     margin: 'auto',
                     paddingTop: '20px'
                     }}>
-                    <Fragments                     
+                    <HighOrderComponent                     
                       name={car.name}
                       year={car.year}
                       onChangeTitle={() => this.changeTitleHandler(car.name)}
