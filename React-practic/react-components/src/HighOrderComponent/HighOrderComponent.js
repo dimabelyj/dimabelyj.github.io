@@ -1,6 +1,7 @@
 import React from 'react';
 import './../PassParamToComponent/PassParamToComponent'
 import withClass from './withClass';
+import PropTypes from 'prop-types'
 
 class HighOrderComponent extends React.Component {
 
@@ -37,4 +38,12 @@ class HighOrderComponent extends React.Component {
     }
 }
 
+HighOrderComponent.propTypes = {
+    name: PropTypes.string,
+    year: PropTypes.number,
+    onChangeName: PropTypes.func,
+    onDelete: PropTypes.func
+}
+
+// Задаём в качестве параметров те параметры, которые описали в withClass
 export default withClass(HighOrderComponent, 'PassParamToComponent')
