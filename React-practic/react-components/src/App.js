@@ -6,6 +6,7 @@ import ErrorBondary from './ErrorBondary/ErrorBondary';
 import CounterForFragments from './CounterForFragments/CounterForFragments';
 import HighOrderComponent from './HighOrderComponent/HighOrderComponent';
 
+export const ClickedContext = React.createContext(false);
 class App extends Component {
 
   constructor(props) {
@@ -13,6 +14,7 @@ class App extends Component {
     super(props)
 
     this.state = {
+      clicked: false,
       cars: [
         { name: 'Ford', year: 2018 },
         { name: 'Audi', year: '2016' },
@@ -72,41 +74,44 @@ class App extends Component {
     return (
       <div style={divStyle}>
         {/* <h1 style={{ backgroundColor: 'green', color: 'blue' }}>{this.state.pageTitle}</h1> */}
-          <h1>{this.props.title}</h1>
-          
-          <CounterForFragments/>
-          <hr/>
-          {/* <input type="text" onChange={this.changeInput} /> */}
-          <button
-            style = {{marginTop: 20}}
-            onClick={this.toggleCarsHandler}
-          >Toggle cars</button>
+        <h1>{this.props.title}</h1>
+        <ClickedContext.Provider value = {this.state.clicked}>
+          <CounterForFragments />
+        </ClickedContext.Provider>
+        <hr />
+        {/* <input type="text" onChange={this.changeInput} /> */}
+        <button
+          style={{ marginTop: 20 }}
+          onClick={this.toggleCarsHandler}
+        >Toggle cars</button> <br />
+        <button onClick={() => this.setState({ clicked: true })}>Change clicked</button>
 
-          {this.state.showCars
-            ? this.state.cars.map((car, index) => {
-              return (
-                <ErrorBondary key={index}>
-                  <div style={{
-                    width: 400,
-                    margin: 'auto',
-                    paddingTop: '20px'
-                    }}>
-                    <HighOrderComponent                     
-                      name={car.name}
-                      year={car.year}
-                      onChangeTitle={() => this.changeTitleHandler(car.name)}
-                      onChangeName={event => this.onChangeName(event.target.value, index)}
-                      onDelete={this.deleteHandler.bind(this, index)}
-                    />
-                  </div>
-                </ErrorBondary>
-              )
-            })
-            : null
-          }
+        {this.state.showCars
+          ? this.state.cars.map((car, index) => {
+            return (
+              <ErrorBondary key={index}>
+                <div style={{
+                  width: 400,
+                  margin: 'auto',
+                  paddingTop: '20px'
+                }}>
+                  <HighOrderComponent
+                    name={car.name}
+                    year={car.year}
+                    index={index}
+                    onChangeTitle={() => this.changeTitleHandler(car.name)}
+                    onChangeName={event => this.onChangeName(event.target.value, index)}
+                    onDelete={this.deleteHandler.bind(this, index)}
+                  />
+                </div>
+              </ErrorBondary>
+            )
+          })
+          : null
+        }
       </div>
-        );
-      }
-    }
-    
-    export default App;
+    );
+  }
+}
+
+export default App;

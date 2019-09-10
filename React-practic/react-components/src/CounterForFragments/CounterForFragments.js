@@ -1,4 +1,5 @@
  import React, {Component} from 'react';
+ import Counter2ForComponent from './../Counter2ForComponent/Counter2ForComponent';
 
 
 // !!!!!!!Закомментирован весь export default class CounterForFragments extends Component (блочно) Продолжение в самом низу!!!!!
@@ -42,6 +43,7 @@ export default class CounterForFragments extends Component{
     return (
         <React.Fragment>
             <h2>CounterForFragments {this.state.counter}</h2>
+            <Counter2ForComponent/>
             <button onClick = {this.addCounter}>+</button>
             <button onClick = {() => this.setState({counter: this.state.counter - 1})}>-</button>
         </React.Fragment>

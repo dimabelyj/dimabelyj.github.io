@@ -5,6 +5,12 @@ import PropTypes from 'prop-types'
 
 class HighOrderComponent extends React.Component {
 
+    componentDidMount() {
+        if (this.props.index === 1) {
+            this.inputRef.focus()
+        }
+    } 
+
     render() {
 
         const inputClasses = ['input'];
@@ -26,6 +32,7 @@ class HighOrderComponent extends React.Component {
                 <h3>Car name: {this.props.name}</h3>
                 <p>Year: <strong>{this.props.year}</strong></p>
                 <input
+                    ref={(inputRef) => this.inputRef = inputRef}
                     type="text"
                     onChange={this.props.onChangeName}
                     defaultValue={this.props.name}
@@ -41,6 +48,7 @@ class HighOrderComponent extends React.Component {
 HighOrderComponent.propTypes = {
     name: PropTypes.string,
     year: PropTypes.number,
+    index: PropTypes.number,
     onChangeName: PropTypes.func,
     onDelete: PropTypes.func
 }
