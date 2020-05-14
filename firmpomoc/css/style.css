@@ -56,7 +56,7 @@ h1 {
 }
 
 span {
-    color: #007bff;
+    color: black;
 }
 
 hr {
@@ -301,7 +301,7 @@ footer {
     }
 }
 
-@media all and (max-width: 480px) {
+@media all and (min-width: 320px) and (max-width: 480px) {
 
     .main-nav ul>li,
     .main-nav a {
@@ -331,5 +331,8 @@ footer {
     }
     .main-header {
         height: 100%;
+    }
+    .main-contakt {
+        font-size: 10px;
     }
 }
